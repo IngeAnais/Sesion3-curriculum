@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Currículum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 700px;
+            margin: auto;
+        }
+        .section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .field {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Currículum Vitae</h1>
+    <form action="procesar_curriculo.php" method="POST" enctype="multipart/form-data">
+        
+        <!-- DATOS PERSONALES -->
+        <div class="section">
+            <h2>Datos Personales</h2>
+            <div class="field">
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+            </div>
+            <div class="field">
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="field">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="field">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni">
+            </div>
+            <div class="field">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+            </div>
+            <div class="field">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+            </div>
+            <div class="field">
+                <label for="localidad">Localidad:</label>
+                <input type="text" id="localidad" name="localidad">
+            </div>
+            <div class="field">
+                <label for="provincia">Provincia:</label>
+                <input type="text" id="provincia" name="provincia">
+            </div>
+            <div class="field">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+            <div class="field">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+        
+        <!-- FORMACIÓN Y ESTUDIOS -->
+        <div class="section">
+            <h2>Formación y Estudios</h2>
+            <div class="field">
+                <label for="titulacion">Titulación:</label>
+                <input type="text" id="titulacion" name="titulacion">
+            </div>
+            <div class="field">
+                <label for="idiomas">Idiomas:</label>
+                <input type="text" id="idiomas" name="idiomas">
+            </div>
+            <div class="field">
+                <label for="informatica">Conocimientos Informáticos:</label>
+                <textarea id="informatica" name="informatica"></textarea>
+            </div>
+            <div class="field">
+                <label for="cursos">Cursos y Seminarios:</label>
+                <textarea id="cursos" name="cursos"></textarea>
+            </div>
+        </div>
+        
+        <!-- EXPERIENCIA PROFESIONAL -->
+        <div class="section">
+            <h2>Experiencia Profesional</h2>
+            <div class="field">
+                <label for="empresa">Empresa:</label>
+                <input type="text" id="empresa" name="empresa">
+            </div>
+            <div class="field">
+                <label for="fechaExp">Fecha:</label>
+                <input type="text" id="fechaExp" name="fechaExp" placeholder="Ej: 2019–2021">
+            </div>
+            <div class="field">
+                <label for="actividad">Puesto / Actividad Desarrollada:</label>
+                <textarea id="actividad" name="actividad"></textarea>
+            </div>
+        </div>
+        
+        <!-- DATOS COMPLEMENTARIOS -->
+        <div class="section">
+            <h2>Datos Complementarios</h2>
+            <div class="field">
+                <label for="otros">Otros Datos:</label>
+                <textarea id="otros" name="otros"></textarea>
+            </div>
+        </div>
+
+        <!-- BOTÓN ENVIAR -->
+        <div style="text-align: center;">
+            <button type="submit" style="padding: 10px 20px; font-size: 16px;">Enviar Currículum</button>
+        </div>
+    </form>
+</body>
+</html>
